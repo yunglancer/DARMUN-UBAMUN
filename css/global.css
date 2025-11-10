@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 body{
     background:#16181a;
@@ -24,10 +25,14 @@ body a{
   height: 60px;
 }
 
+.contsvg{
+  display: none;
+}
+
 header a {
   text-decoration: none;
   color: white;
-  font-family: 'Bokor', cursive;
+  font-family:'Bebas Neue' , sans-serif;
   font-size: 25px;
 }
 
@@ -37,7 +42,8 @@ header a:hover{
 }
 
 header{
-  background: #16181a;
+  background: #5B070A;
+  background: linear-gradient(180deg,rgba(91, 7, 10, 1) 0%, rgba(2, 21, 39, 1) 100%);
 }
 
 header button{
@@ -49,17 +55,12 @@ nav{
 }
 
 
-@font-face {
-  font-family: 'Heartless';
-  src: url('/assets/Heartless.ttf');
-}
 
 .bgimagen{
   background-image: url(../assets/imagenes/banner.png);
-  background-repeat: no-repeat; ; 
   background-attachment: scroll; 
-  background-size: 100%;
   background-position: center;
+  width: 100%;
 }
 
 footer, .foooter{
@@ -73,7 +74,7 @@ footer, .foooter{
 
 footer h5{
   color: white;
-  font-family: 'Bokor', cursive;
+   font-family:'Bebas Neue' , sans-serif;
 }
 
 .nav-link:hover{
@@ -97,7 +98,7 @@ footer h5{
 }
 
 .textoredes{
-  font-family: 'Bokor', cursive;
+  font-family:'Bebas Neue' , sans-serif;
   margin-top: auto;
   margin-bottom: auto;
 }
