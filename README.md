@@ -1,5 +1,5 @@
 # Ghoscer-Shop
-Repositorio del front-end del proyecto de una tienda online "Ghoscer", es un sitio web estatico de 9 paginas, ests basado en un e-commerce ficticio de una marca de ropa denominada "Ghoscer".
+Repositorio del front-end del proyecto de una pagina informativa para "DARMUN/UBAMUN", es un sitio web estatico de 5 paginas
 
 ## Lenguajes utilizados
 
@@ -16,6 +16,6 @@ Repositorio del front-end del proyecto de una tienda online "Ghoscer", es un sit
 
 ## Deploy
 
-Puedes ver el sitio en linea haciendo click [aquí.](https://yunglancer.github.io/Ghoscer-Shop/)
+Puedes ver el sitio en linea haciendo click [aquí.](https://yunglancer.github.io/DARMUN-UBAMUN)
 
-*Hecho por Luis Fernando a.k.a. yung lancer 2023* 
+*Hecho por Luis Fernando a.k.a. yung lancer 2025* 

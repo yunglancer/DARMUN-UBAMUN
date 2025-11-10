@@ -1,0 +1,10 @@
+p a{
+    color: white;
+    text-decoration: none;
+}
+
+.carta{
+    background: #5B070A;
+  background: linear-gradient(180deg,rgba(91, 7, 10, 1) 0%, rgba(2, 21, 39, 1) 100%);
+  color: white;
+}
