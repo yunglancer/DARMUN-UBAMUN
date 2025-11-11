@@ -40,9 +40,7 @@
                     <a class="py-2 m-auto mx-3" href="cuenta.html" aria-label="Product">
                         <svg class="m-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                            <path fill-rule="evenodd"
-                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                           
                         </svg>
                     </a>
                     <button class="navbar-toggler text-white mx-4" type="button" data-bs-toggle="collapse"
@@ -86,7 +84,7 @@
     </div>
 
     <!--principal-->
-    <div class="d-flex w-100">
+    <div class="d-flex w-100" data-aos="zoom-in" data-aos-duration="1000"> 
         <div class="w-75 container mt-5 mb-5 bg-gray m-auto" style="max-width: 800px;">
             <h1 class="text-center mb-4 titulo">Postulate ahora a DARMUN/UBAMUN</h1>
 
@@ -220,13 +218,13 @@
                     <div class="invalid-feedback">Por favor, selecciona una opción.</div>
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-4">
                     <label for="motivacion" class="form-label cuerpo">¿Por qué quieres entrar a la delegación?</label>
                     <textarea class="form-control" id="motivacion" name="motivacion" rows="4" required></textarea>
                     <div class="invalid-feedback">Por favor, explica por qué quieres unirte a la delegación.</div>
                 </div>
 
-                <div class="text-center mt-4">
+                <div class="text-center mt-4"  data-aos="fade-up" data-aos-duration="1000">
                     <button type="submit" class="btn btn-danger text-white btn-lg mt-4">Enviar Postulación</button>
                 </div>
             </form>
