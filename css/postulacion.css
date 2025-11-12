@@ -1,0 +1,15 @@
+ .cuerpo{
+    text-align: justify;
+ }
+ label{
+    font-weight: bold;
+    font-size: 1.2rem;
+ }
+ @media (min-width: 200px) and (max-width: 765px) { 
+    .cuerpo, label{
+        font-size: 1rem ;
+    }
+
+  }
+
+   

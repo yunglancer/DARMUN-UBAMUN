@@ -14,6 +14,14 @@ p {
     text-align: justify;
 }
 
+.info-bloque{
+    width: 100%;
+}
+
+.info-texto{
+    width: 50%;
+}
+
 .nosotros{
     margin: auto;
     flex-direction: column;
@@ -74,7 +82,7 @@ hr {
 }
 
 .info-bloque .info-texto p {
-    font-size: 1rem; /* 16px */
+    font-size: 1.5rem; /* 16px */
     line-height: 1.6;
     margin-bottom: 15px;
 }
