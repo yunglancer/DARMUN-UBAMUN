@@ -3,8 +3,35 @@ p a{
     text-decoration: none;
 }
 
+ .invisible{
+    display: none;
+
+}
+
 .carta{
     background: #5B070A;
   background: linear-gradient(180deg,rgba(91, 7, 10, 1) 0%, rgba(2, 21, 39, 1) 100%);
   color: white;
+}
+
+@media (max-width: 991px){
+    .invisible{
+        display: flex;
+    }
+    p{
+        font-size: 1rem;
+    }
+
+}
+
+
+@media (max-width: 767px){
+    .bgimagen{
+    background-image: url(../assets/imagenes/bannerindexresposive.png);
+    background-repeat: no-repeat;
+    background-position: center;}
+
+    p {
+        font-size: 0.95rem;
+    }
 }

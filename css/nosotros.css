@@ -1,130 +1,99 @@
-
-body{
+body {
     color: white;
+    background-color: #1a1a1a; /* Fondo oscuro de respaldo por si falla la imagen */
+    overflow-x: hidden; /* Evita scroll horizontal accidental */
 }
-.contenedor {
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    font-family: 'Roboto', sans-serif;
-}
+
+/* Eliminamos .contenedor personalizado, usamos .container de Bootstrap */
 
 p {
     text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem; /* Base size */
+    padding: 1rem;
 }
 
-.info-bloque{
-    width: 100%;
+h3{
+    padding: 1rem;
+    font-size: 2.2rem;
 }
 
-.info-texto{
-    width: 50%;
+.nosotros {
+    height: auto;
+    width: 90%;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+/* Títulos */
+.seccion-encabezado h2, 
+.title-font {
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    line-height: 1.2;
 }
 
-.nosotros{
-    margin: auto;
-    flex-direction: column;
-}
-
-/* Encabezado principal de la sección */
-.seccion-encabezado {
-    text-align: center;
-}
-
+/* Responsividad de Títulos: Grande en PC, más chico en móvil */
 .seccion-encabezado h2 {
-    font-size: 3.5rem; /* 40px */
-    color: white;
-    font-family:'Bebas Neue' , sans-serif;
+    font-size: 2.5rem; /* Móvil */
+}
+@media (min-width: 768px) {
+    .seccion-encabezado h2 {
+        font-size: 3.5rem; /* Desktop */
+    }
 }
 
-.seccion-encabezado .subtitulo {
-    font-size: 1.1rem; /* 18px */
-    color: white;
-}
-
+/* Hr personalizado */
 hr {
     border: 0;
-    height: 1px;
+    height: 2px;
     background: #e0e0e0;
-    margin: 40px 0;
+    opacity: 0.5;
+    margin: 30px 0;
 }
 
-/* Estructura de bloque de información (para Historia y Equipo) */
-.info-bloque {
-    display: flex;
-    flex-wrap: wrap; /* Para que en móviles se ponga uno debajo del otro */
-    align-items: center;
-    margin-bottom: 50px;
-    gap: 30px; /* Espacio entre imagen y texto */
-}
-
-.info-bloque .info-texto,
-.info-bloque .info-imagen {
-    flex: 1; /* Hace que ambos ocupen el 50% */
-    min-width: 300px; /* Evita que se encojan demasiado */
-    display: flex;
-    flex-direction: column;
-}
-
-.info-bloque .info-imagen img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px; /* Bordes redondeados sutiles */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.info-bloque .info-texto h3 {
-    font-size: 3rem; /* 32px */
-     font-family:'Bebas Neue' , sans-serif;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.info-bloque .info-texto p {
-    font-size: 1.5rem; /* 16px */
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-/* Clase 'reverse' para alternar el orden (imagen a la izquierda) */
-.info-bloque.reverse {
-    flex-direction: row-reverse;
-}
-
-/* Estilos para la sección de Pilares (Misión, Visión, Valores) */
-.pilares {
-    margin-bottom: 50px;
-}
-
-.pilares-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
+/* Pilares Cards */
 .pilar-card {
-    background: #5B070A;
-    background: linear-gradient(180deg,rgba(91, 7, 10, 1) 0%, rgba(2, 21, 39, 1) 100%);
-    padding: 25px;
-    border-radius: 8px;
+    background: linear-gradient(180deg, rgba(91, 7, 10, 1) 0%, rgba(2, 21, 39, 1) 100%);
+    padding: 30px 20px;
+    border-radius: 12px;
     text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.pilar-card:hover {
+    transform: translateY(-5px); /* Efecto al pasar el mouse */
 }
 
 .pilar-card h4 {
-    font-size: 1.5rem; /* 24px */
+    font-size: 2rem;
     color: white;
-    margin-bottom: 10px;
-     font-family:'Bebas Neue' , sans-serif;
+    margin-bottom: 15px;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
 }
 
 .pilar-card p {
-    font-size: 0.95rem; /* 15px */
-    line-height: 1.5;
-    color: white;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.9);
+    text-align: center; /* En tarjetas se ve mejor centrado */
 }
 
+/* Ajustes Navbar */
+.site-header {
+    background-color: rgba(0,0,0,0.9); /* Fondo oscuro para el menú */
+    backdrop-filter: blur(10px);
+}
 
+/* Imágenes */
+.img-fluid {
+    border-radius: 10px;
+}
+.invisible{
+    display: none;
+
+}
 
 /* --- Media Queries para Móviles --- */
 @media (max-width: 768px) {
@@ -132,8 +101,29 @@ hr {
         flex-direction: column;
     }
     
-    /* Quita el 'reverse' en móvil para que siempre sea texto y luego imagen */
     .info-bloque.reverse {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 991px){
+    .invisible{
+        display: flex;
+    }
+    p{
+        font-size: 1rem;
+    }
+
+}
+
+
+@media (max-width: 767px){
+    .bgimagen{
+    background-image: url(../assets/imagenes/bannerindexresposive.png);
+    background-repeat: no-repeat;
+    background-position: center;}
+
+    p {
+        font-size: 0.95rem;
     }
 }

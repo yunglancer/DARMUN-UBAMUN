@@ -3,6 +3,11 @@
 .bgimagen a{
     margin-top: 6rem;
     font-family:'Bebas Neue' , sans-serif;
+    font-size: 2rem;
+}
+
+.carousel-item img{
+    height: 500px;
 }
 
 .carousel-item h1{
@@ -13,3 +18,14 @@
 
 
 
+@media (max-width: 767px){
+    .bgimagen{
+    background-image: url(../assets/imagenes/bannerindexresposive.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.bgimagen a{
+    font-size: 1.2rem;
+}
+}
