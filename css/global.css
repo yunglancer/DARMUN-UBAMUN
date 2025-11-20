@@ -201,8 +201,8 @@ body {
 
   @media (min-width: 768px) and (max-width: 1199px) { 
     .margincosas{
-      margin-left: 10px;
-      margin-right: 10px;
+      margin-left: 10px !important;
+      margin-right: 10px !important;
     }
     
   }
@@ -232,6 +232,8 @@ body {
     header button svg{
       color: white;
     }
+
+    
 
     header .nav-item a{
       font-size: 20px;
@@ -270,7 +272,11 @@ body {
     
 
   }
-  
+  @media (max-width: 767px){
+    header ul{
+      flex-wrap: wrap;
+    }
+  }
 
   @media (max-width: 376px){
     header .nav-link{
@@ -280,6 +286,11 @@ body {
     
     nav{
       justify-content: center ;
+    }
+
+     .margincosas{
+      margin-left: 10px !important;
+      margin-right: 10px !important;
     }
     
   }

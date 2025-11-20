@@ -3,23 +3,28 @@ p a{
     text-decoration: none;
 }
 
- .invisible{
-    display: none;
 
+
+form  {
+    margin: 1rem;
 }
 
 .carta{
     background: #5B070A;
   background: linear-gradient(180deg,rgba(91, 7, 10, 1) 0%, rgba(2, 21, 39, 1) 100%);
   color: white;
+  margin: 1rem;
 }
 
+.lead{
+    margin: 1rem;
+}
 @media (max-width: 991px){
     .invisible{
         display: flex;
     }
     p{
-        font-size: 1rem;
+        font-size: 1rem !important;
     }
 
 }
@@ -32,6 +37,6 @@ p a{
     background-position: center;}
 
     p {
-        font-size: 0.95rem;
+        font-size: 0.9rem !important;
     }
 }
