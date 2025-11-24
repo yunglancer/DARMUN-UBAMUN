@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/estilosindex.css">
+    <link rel="stylesheet" href="css/galeria.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <link rel="shortcut icon" href="assets/imagenes/icon.png" type="image/x-icon">
-    <title>Inicio | DARMUN/UBAMUN</title>
+    <title>Galeria | DARMUN/UBAMUN</title>
 </head>
 <body>
     <!--HEADER-->
@@ -73,29 +73,82 @@
         
       </header>
 
-      <!--NOMBRE DE LA TIENDA-->
-      <div class="position-relative overflow-hidden p-4 pt-4 pb-1 p-md-5 text-center h-25 bgimagen align-items-end">
-        <div class="col-md-5 p-lg-5 my-5 ">
-        </div>
-        <div class="col-md-5 p-lg-5 my-5 ">
-        </div>
-        <div class="col-md-5 p-lg-5 my-5 ">
-        </div>
-        <div class="d-flex align-content-end mt-5 justify-content-center w-100 "data-aos="fade-up" data-aos-duration="2000">
-          <a  class="btn btn-lg btn-light mb-1 mt-5 mx-2 m-auto " href="postulacion.html">Postulate Ahora</a>
-        </div>
       </div>
       
            
  <main class="container my-5">
 
-    <div class="seccion-encabezado text-center mb-5">
-      <h2 data-aos="fade-up" data-aos-duration="1000">¡PROXIMAMENTE! PAGINA EN CONSTRUCCION</h2>
-      <hr class="mx-auto w-25">
+    <div class="contenedor-galeria">
+
+    <div class="encabezado-seccion">
+        <h2>Galería</h2>
+        <p>Momentos capturados dentro y fuera de los comités.</p>
     </div>
 
-   
-    </section>
+    <div class="masonry-layout">
+        
+        <div class="item-galeria">
+            <img src="assets/imagenes/1.jpg"  onclick="abrirModal(this)">
+        </div>
+
+        <div class="item-galeria">
+            <img src="assets/imagenes/2.jpg" onclick="abrirModal(this)">
+        </div>
+
+        <div class="item-galeria">
+            <img src="assets/imagenes/3.jpg"  onclick="abrirModal(this)">
+        </div>
+
+        <div class="item-galeria">
+            <img src="assets/imagenes/4.JPG" onclick="abrirModal(this)">
+        </div>
+
+        <div class="item-galeria">
+            <img src="assets/imagenes/5.JPG"  onclick="abrirModal(this)">
+        </div>
+
+        <div class="item-galeria">
+            <img src="assets/imagenes/6.jpg"  onclick="abrirModal(this)">
+        </div>
+        <div class="item-galeria">
+            <img src="assets/imagenes/7.jpg"  onclick="abrirModal(this)">
+        </div>
+        <div class="item-galeria">
+            <img src="assets/imagenes/8.PNG"  onclick="abrirModal(this)">
+        </div>
+        <div class="item-galeria">
+            <img src="assets/imagenes/9.jpg"  onclick="abrirModal(this)">
+        </div>
+         <div class="item-galeria">
+            <img src="assets/imagenes/fotonosotros1.jpg"  onclick="abrirModal(this)">
+        </div>
+         <div class="item-galeria">
+            <img src="assets/imagenes/10.jpg" onclick="abrirModal(this)">
+        </div>
+        <div class="item-galeria">
+            <img src="assets/imagenes/11.jpg" onclick="abrirModal(this)">
+        </div>
+        <div class="item-galeria">
+            <img src="assets/imagenes/12.JPG" onclick="abrirModal(this)">
+        </div>
+        
+        
+        </div>
+
+</div>
+
+<div id="modalVisualizador" class="modal-galeria" onclick="cerrarModal()">
+    <span class="cerrar">&times;</span>
+    <img class="modal-contenido" id="imgDestacada">
+    <div id="caption"></div>
+</div>
+<div class="d-flex flex-column" data-aos="fade-up" data-aos-duration="2000">
+    <h2 class="text-center delegado">¿Quieres ser parte de la luz de la creatividad y la academia?</h2>
+     <div class="d-flex align-content-end mt-2 justify-content-center w-100 "data-aos="fade-up" data-aos-duration="2000">
+      
+    <a class="btn btn-lg btn-light mb-1 mx-2 m-auto botondelegado " href="postulacion.html">Postulate Ahora</a>
+    </div>
+    </div>
 
   </main>
       
@@ -187,6 +240,24 @@
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script>
         AOS.init();
+     
+        // Obtener elementos del DOM
+        var modal = document.getElementById("modalVisualizador");
+        var modalImg = document.getElementById("imgDestacada");
+        
+        // Función para abrir el modal
+        function abrirModal(elementoImagen) {
+            modal.style.display = "flex";
+            modal.style.alignItems = "center";
+            modal.style.justifyContent = "center";
+            modalImg.src = elementoImagen.src; // Pone la misma foto en grande
+        }
+
+        // Función para cerrar el modal
+        function cerrarModal() {
+            modal.style.display = "none";
+        }
+
       </script>
 </body>
 </html>

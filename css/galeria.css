@@ -1,0 +1,124 @@
+/* --- CONTENEDOR PRINCIPAL --- */
+.contenedor-galeria {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Reutilizando tus estilos de encabezado */
+.encabezado-seccion h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.encabezado-seccion p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* --- MASONRY LAYOUT (Estilo Pinterest) --- */
+.masonry-layout {
+    /* Define columnas automáticas */
+    column-count: 3; 
+    column-gap: 20px; /* Espacio entre columnas */
+}
+
+.item-galeria {
+    /* Evita que una imagen se parta entre dos columnas */
+    break-inside: avoid; 
+    margin-bottom: 20px; /* Espacio vertical entre fotos */
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+.item-galeria img {
+    width: 100%;
+    height: auto;
+    display: block; /* Elimina espacios fantasma */
+}
+
+/* Efecto Hover */
+.item-galeria:hover {
+    transform: scale(1.02); /* Pequeño zoom al pasar el mouse */
+    filter: brightness(1.1); /* Se ilumina un poco */
+}
+
+/* --- RESPONSIVE (Adaptación a pantallas) --- */
+@media (max-width: 900px) {
+    .masonry-layout {
+        column-count: 2; /* 2 columnas en Tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .masonry-layout {
+        column-count: 1; /* 1 columna en Móviles */
+    }
+}
+
+/* --- ESTILOS DEL MODAL (VISUALIZADOR) --- */
+.modal-galeria {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9); /* Fondo negro casi opaco */
+    backdrop-filter: blur(5px);
+}
+
+.modal-contenido {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 900px;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    animation-name: zoom;
+    animation-duration: 0.4s;
+}
+
+.cerrar {
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: #d4af37; /* Dorado al pasar mouse */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Animación de apertura */
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* Responsive del Modal */
+@media only screen and (max-width: 700px){
+    .modal-contenido {
+        width: 100%;
+    }
+}

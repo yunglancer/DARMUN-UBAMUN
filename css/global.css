@@ -59,7 +59,18 @@ nav{
   justify-content: space-between;
 }
 
+.delegado{
+  font-family: 'Bebas Neue', sans-serif;
+  color: white;
+  font-size: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 
+.botondelegado{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+}
 
 .bgimagen{
   background-image: url(../assets/imagenes/banner.png);
