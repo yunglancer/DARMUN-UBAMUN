@@ -1,4 +1,4 @@
-# Ghoscer-Shop
+# DARMUN/UBAMUN
 Repositorio del front-end del proyecto de una pagina informativa para "DARMUN/UBAMUN", es un sitio web estatico de 5 paginas
 
 ## Lenguajes utilizados
